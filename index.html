@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài tập JS</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: rgb(224, 222, 219);
+        font-family: "Poppins", sans-serif;
+      }
+      .wrapper {
+        padding: 50px;
+      }
+      .card {
+        width: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card m-auto shadow">
+        <h5 class="card-header">Bài tập 1: Tính thuế thu nhập cá nhân</h5>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-4">
+                <input
+                  placeholder="Nhập họ tên"
+                  type="text"
+                  class="form-control"
+                  id="name"
+                />
+              </div>
+              <div class="col-4">
+                <input
+                  placeholder="Tổng thu nhập năm"
+                  type="number"
+                  class="form-control"
+                  id="total_income"
+                />
+              </div>
+              <div class="col-4">
+                <input
+                  placeholder="Số người phụ thuộc"
+                  type="number"
+                  class="form-control"
+                  id="amount"
+                />
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" id="ex1">
+              Tính tiền thuế
+            </button>
+          </form>
+        </div>
+        <div class="card-footer">
+          <h6 id="message"></h6>
+        </div>
+      </div>
+      <div class="mt-5">
+        <div class="card m-auto shadow">
+          <h5 class="card-header">Bài tập 2: Tính tiền cáp</h5>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-4">
+                  <select
+                    class="form-control"
+                    id="choose"
+                    onchange="addInput()"
+                  >
+                    <option value="">Loại khách hàng</option>
+                    <option value="nhadan">Nhà dân</option>
+                    <option value="doanhnghiep">Doanh nghiệp</option>
+                  </select>
+                </div>
+                <div class="col-4">
+                  <input
+                    placeholder="Nhập mã khách hàng"
+                    type="text"
+                    class="form-control"
+                    id="client"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    placeholder="Số kênh cao cấp"
+                    type="number"
+                    class="form-control"
+                    id="channel"
+                  />
+                </div>
+                <div class="col-4 mt-3" id="connect" style="display: none">
+                  <input
+                    placeholder="Số kênh kết nối"
+                    type="number"
+                    class="form-control"
+                    id="number_connect"
+                  />
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary mt-3" id="ex2">
+                Tính tiền cáp
+              </button>
+            </form>
+          </div>
+          <div class="card-footer">
+            <h6 id="message_2"></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
